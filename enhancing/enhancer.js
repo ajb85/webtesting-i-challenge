@@ -8,7 +8,7 @@ function succeed(item) {
   // enhancement++ ✓
   // enhancement = 20, do nothing  ✓
   // durability not changed  ✓
-  return item.enhancement.enhancement < 20
+  return item.enhancement < 20
     ? { ...item, enhancement: item.enhancement + 1 }
     : item;
   return { ...item };
@@ -28,7 +28,7 @@ function fail(item) {
     return {
       ...item,
       durability: item.durability - 10,
-      enhacement: enhancement - 1
+      enhancement: enhancement - 1
     };
   }
 }
