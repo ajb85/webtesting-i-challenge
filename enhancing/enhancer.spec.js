@@ -50,5 +50,6 @@ describe("enchancer.js", () => {
       });
     });
   });
+  // Stretch
   //describe("get", () => {});
 });
