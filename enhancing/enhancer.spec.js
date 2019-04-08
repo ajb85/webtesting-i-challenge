@@ -50,6 +50,13 @@ describe("enchancer.js", () => {
       });
     });
   });
+
   // Stretch
-  //describe("get", () => {});
+  describe("get", () => {
+    it("Should return +enhancement before item name, if enhanced", () => {
+      const testNotEnhanced = { ...item, enhancement: 0 };
+      expect(get(item)).toMatchObject({ ...item, name: "[+4] Very Real Item" });
+      expect(get(testNotEnhanced)).toMatchObject({ ...testNotEnhanced });
+    });
+  });
 });
