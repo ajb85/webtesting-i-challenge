@@ -1,12 +1,19 @@
-const enhancer = require("./enhancer.js");
+const { succeed, fail, repair, get } = require("./enhancer.js");
 // test away!
 
-description("enchancer.js", () => {
-  description("succeed", () => {});
+const item = { name: "Very Real Item", durability: 59, enhacement: 4 };
 
-  description("fail", () => {});
+describe("enchancer.js", () => {
+  describe("repair()", () => {
+    it("should repair item to full", () => {
+      const expected = { ...item, durability: 100 };
+      expect(repair(item)).toMatchObject(expected);
+    });
+  });
 
-  description("repair", () => {});
+  //describe("succeed", () => {});
 
-  description("get", () => {});
+  //describe("fail", () => {});
+
+  //describe("get", () => {});
 });
